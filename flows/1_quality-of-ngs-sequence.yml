@@ -78,8 +78,6 @@ groups:
                 width: 10em
                 correct_answer:
                 - <plain> 1000000
-                - type: int
-                  value: 1000000
  
             blank2:
                 type: ShortAnswer
@@ -87,8 +85,6 @@ groups:
                 appended_text: "bp"
                 correct_answer:
                 - <plain> 150
-                - type: int
-                  value: 150
     -
         type: ChoiceQuestion
         id: base
@@ -124,16 +120,12 @@ groups:
                 width: 10em
                 correct_answer:
                 - <plain> 2
-                - type: int
-                  value: 2
  
             blank2:
                 type: ShortAnswer
                 width: 10em
                 correct_answer:
                 - <plain> 40
-                - type: int
-                  value: 40
 
 completion_text: |
 
