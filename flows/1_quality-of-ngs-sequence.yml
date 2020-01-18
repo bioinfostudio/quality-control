@@ -1,0 +1,143 @@
+title: "Quality of NGS sequence"
+description: |
+
+    # Quality of NGS sequence
+
+rules:
+    start:
+    -
+        if_has_role: [student, ta, instructor]
+        if_has_fewer_sessions_than: 4
+        may_start_new_session: True
+        may_list_existing_sessions: True
+
+    -
+        may_start_new_session: False
+        may_list_existing_sessions: True
+
+    access:
+    -
+        permissions: [view, submit_answer, end_session]
+
+    grade_identifier: qc
+    grade_aggregation_strategy: use_latest
+
+    grading:
+    -
+        credit_percent: 100
+
+groups:
+-
+    id: intro
+    shuffle: False
+    pages:
+    -
+        type: Page
+        id: qc
+        content: |
+
+            ## Introduction
+ 
+            {% include "markdowns/01_introduction.md" %}
+    -
+        type: TerminalQuestion
+        id: env 
+        cid: terminal
+        value: 5
+        prompt: |
+
+            ## Prepare the Environment
+ 
+            {% include "markdowns/02_environment.md" %}
+    -
+        type: TerminalQuestion
+        id: viz
+        cid: terminal
+        value: 5
+        prompt: |
+
+            ## Quality Visualisation
+
+            {% include "markdowns/03_visualization.md" %}
+    -
+        type: InlineMultiQuestion
+        id: reads
+        value: 10
+        prompt: |
+
+          # How many sequences were there in your file? What is the read length?
+
+        question: |
+
+          Total reads = [[blank1]]. Read length = [[blank2]]
+
+        answers:
+
+            blank1:
+            type: ShortAnswer
+            width: 10em
+            correct_answer:
+            - <plain> 1000000
+            - type: int
+              value: 1000000
+ 
+            blank2:
+            type: ShortAnswer
+            width: 10em
+            appended_text: "bp"
+            correct_answer:
+            - <plain> 150
+            - type: int
+              value: 150
+    -
+        type: ChoiceQuestion
+        id: base
+        value: 5
+        prompt: |
+
+            # Does the quality score values vary throughout the read length?
+            
+            Look at the ’per base sequence quality plot’
+
+        choices:
+
+        - ~CORRECT~ Yes
+        - No 
+
+        answer_explanation: Quality scores are dropping towards the end of the reads.
+    -
+        type: InlineMultiQuestion
+        id: range
+        value: 10
+        prompt: |
+
+          # What is the quality score range you see?
+
+        question: |
+
+          [[blank1]] - [[blank2]]
+
+        answers:
+
+            blank1:
+            type: ShortAnswer
+            width: 10em
+            correct_answer:
+            - <plain> 2
+            - type: int
+              value: 2
+ 
+            blank2:
+            type: ShortAnswer
+            width: 10em
+            correct_answer:
+            - <plain> 40
+            - type: int
+              value: 40
+ 
+
+completion_text: |
+
+    # See you !
+
+    Thanks for completing the quiz.

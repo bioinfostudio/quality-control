@@ -1,0 +1,23 @@
+chunks:
+
+-
+    title: "Welcome to the quality control course"
+    id: welcome
+    rules:
+    -
+        weight: 100
+
+    -
+        weight: 0
+
+    content: |
+
+        # Quality Control 
+
+        After completing this practical the trainee should be able to:
+
+        - Assess the overall quality of NGS (FastQ format) sequence reads
+        - Visualise the quality, and other associated matrices, of reads to decide on filters and cutoffs for cleaning up data ready for downstream analysis
+        - Clean up adaptors and pre-process the sequence data for further analysis
+
+        <i class="fab fa-creative-commons"></i> / by Sonika Tyagi, Nandan Deshpande
