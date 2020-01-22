@@ -5,18 +5,10 @@ each input file.
 Execute the following command on the two files:
 
 ```bash
-fastqc -f fastq qcdemo_R1.fastq.gz
-fastqc -f fastq qcdemo_R2.fastq.gz
+$ fastqc -f fastq qcdemo_R1.fastq.gz
+$ fastqc -f fastq qcdemo_R2.fastq.gz
 ```
 
-View the FastQC report file of the bad data using a web browser such as
-firefox. The `&` sign puts the job in the background.
-
-```bash
-firefox qcdemo_R2_fastqc.html &
-```
-
-<br>
 The report file will have a Basic Statistics table and various graphs
 and tables for different quality statistics e.g.:
 
@@ -32,8 +24,7 @@ Sequence length | 150
 
 **Table 2:** Summary statistics for bad_example_untrimmed
 
-<br>
-![image](images/bad_qcdemo_R2.png)
+![image](repo:images/bad_qcdemo_R2.png)
 
 **Figure 1:** bad_example_untrimmed_QC_plot
 

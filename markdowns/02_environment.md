@@ -7,17 +7,17 @@ be found in the QC directory on your desktop.
 Open the Terminal and go to the directory where the data are stored:
 
 ```bash
-cd
-ls
-cd qc
-pwd
+$ cd
+$ ls
+$ cd qc
+$ pwd
 ```
 
 At any time, help can be displayed for FastQC using the following
 command:
 
 ```bash
-fastqc -h
+$ fastqc -h
 ```
 
 Look at SYNOPSIS (Usage) and options after typing `fastqc -h`

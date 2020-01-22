@@ -17,7 +17,7 @@ rules:
 
     access:
     -
-        permissions: [view, submit_answer, end_session]
+        permissions: [view, submit_answer, end_session, see_correctness, see_answer_after_submission]
 
     grade_identifier: qc
     grade_aggregation_strategy: use_latest
@@ -28,48 +28,48 @@ rules:
 
 groups:
 -
-    id: intro
+    id: qc 
     shuffle: False
     pages:
     -
         type: Page
-        id: qc
+        id: intro
+        cid: terminal
         content: |
 
             ## Introduction
  
             {% include "markdowns/01_introduction.md" %}
     -
-        type: TerminalQuestion
-        id: env 
+        type: Page
+        id: environ 
         cid: terminal
-        value: 5
-        prompt: |
+        content: |
 
             ## Prepare the Environment
  
             {% include "markdowns/02_environment.md" %}
     -
-        type: TerminalQuestion
-        id: viz
+        type: Page
+        id: visualize
         cid: terminal
-        value: 5
-        prompt: |
+        content: |
 
             ## Quality Visualisation
 
             {% include "markdowns/03_visualization.md" %}
     -
         type: InlineMultiQuestion
-        id: reads
+        id: read
+        cid: terminal
         value: 10
         prompt: |
 
-          # How many sequences were there in your file? What is the read length?
+            # How many sequences were there in your file? What is the read length?
 
         question: |
 
-          Total reads = [[blank1]]. Read length = [[blank2]]
+            Total reads = [[blank1]]  Read length = [[blank2]]
 
         answers:
 
@@ -87,13 +87,14 @@ groups:
                 - <plain> 150
     -
         type: ChoiceQuestion
-        id: base
+        id: perbase
+        cid: terminal
         value: 5
         prompt: |
 
             # Does the quality score values vary throughout the read length?
             
-            Look at the ’per base sequence quality plot’
+            Look at the `per base sequence quality plot`
 
         choices:
 
@@ -104,6 +105,7 @@ groups:
     -
         type: InlineMultiQuestion
         id: range
+        cid: terminal
         value: 10
         prompt: |
 
