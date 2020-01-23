@@ -11,8 +11,8 @@ adapter/primer sequences from your data. Apart from `skewer` which will be
 using today the following two tools are also useful for trimming and
 removing adapter sequence:
 
-- Cutadapt: http://code.google.com/p/cutadapt/
-- Trimmomatic: http://www.usadellab.org/cms/?page=trimmomatic
+- [Cutadapt](https://cutadapt.readthedocs.io/en/stable/)
+- [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
 
 
 Here we are demonstrating `Skewer` to trim a given adapter sequence.
@@ -28,7 +28,7 @@ $ skewer -x TGGAATTCTCGGGTGCCAAGGT -t 20 -l 10 -L 35 -q 30 adaptorQC.fastq.gz
 > **-t:** number of threads to use  
 > **-l:** min length to keep after trimming  
 > **-L:** Max length to keep after trimming, in this experiment we were expecting only small RNA fragments  
-> **-Q:** Quality threshold used for trimming at 3’ end. Use -m option to control the end you want to trim  
+> **-q:** Quality threshold used for trimming at 3’ end. Use -m option to control the end you want to trim  
 
 Run FastQC on the adapter trimmed file and visualise the quality scores.
 Fastqc now shows adaptor free results.
@@ -41,7 +41,9 @@ $ firefox adaptorQC.fastq-trimmed_fastqc.html &
 ### Fixed Length Trimming
 
 **We will not cover fixed length trimming but provide the following for
-your information.** Low quality read ends can be trimmed using a
+your information.**
+
+Low quality read ends can be trimmed using a
 fixed-length trimming. We will use the `fastx_trimmer` from the
 FASTX-Toolkit. Usage message to find out various options you can use
 with this tool. Type `fastx_trimmer -h` at anytime to display help.

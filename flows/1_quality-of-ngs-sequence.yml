@@ -258,11 +258,11 @@ groups:
 
           # fastqc option
 
-          How can you use -a option with fastqc? (Hint try fastqc -h).
+          How can you use `-a` option with fastqc? (Hint try fastqc -h).
 
         question: |
 
-            [[blank1]] can be supplied in a file for screening.
+            [[blank1]] can be supplied in a file for screening
 
         answers:
 
