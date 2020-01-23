@@ -128,6 +128,173 @@ groups:
                 width: 10em
                 correct_answer:
                 - <plain> 40
+    -
+        type: TextQuestion
+        id: half
+        cid: terminal
+        value: 5
+        prompt: |
+
+          # Which position?
+
+          At around which position do the scores start falling below Q20 for the 25% quartile range (25% of reads below Q20)?
+
+        answers:
+
+          - <plain> 30
+          - <plain> thirty
+    -
+        type: InlineMultiQuestion
+        id: trim
+        cid: terminal
+        value: 5
+        prompt: |
+
+          # How can we trim the reads to filter out the low quality data?
+
+        question: |
+
+            By trimming off the bases after a fixed position of
+            the read or by trimming off bases based on the [[blank1]] score.
+
+        answers:
+
+            blank1:
+                type: ShortAnswer
+                width: 10em
+                correct_answer:
+                - <plain> quality
+    -
+        type: Page
+        id: gqd
+        cid: terminal
+        content: |
+
+            ## Good Quality Data
+
+            {% include "markdowns/04_good-quality.md" %}
+    -
+        type: Page
+        id: trimming
+        cid: terminal
+        content: |
+
+            ## Read Trimming
+
+            {% include "markdowns/05_read-trimming.md" %}
+    -
+        type: ChoiceQuestion
+        id: after_trim
+        cid: terminal
+        value: 5
+        prompt: |
+
+            # Number of total reads
+
+            Did the number of total reads in R1 and R2 change after trimming?
+
+        choices:
+
+        - ~CORRECT~ Yes
+        - No
+
+        answer_explanation:
+
+            Quality trimming discarded >25000 reads. However, we retain a lot of
+            maximal length reads which have good quality all the way to the ends.
+    -
+        type: InlineMultiQuestion
+        id: lengths
+        cid: terminal
+        value: 10
+        prompt: |
+
+          # Range of read length
+
+          What reads lengths were obtained after quality based trimming?
+
+        question: |
+
+          [[blank1]] - [[blank2]]
+
+        answers:
+
+            blank1:
+                type: ShortAnswer
+                width: 10em
+                correct_answer:
+                - <plain> 50
+ 
+            blank2:
+                type: ShortAnswer
+                width: 10em
+                correct_answer:
+                - <plain> 150
+
+        answer_explanation:
+
+            Reads <50 bp, following quality trimming, were discarded.
+    -
+        type: ChoiceQuestion
+        id: adapter
+        cid: terminal
+        value: 5
+        prompt: |
+
+            # Adapter
+
+            Did you observe adapter sequences in the data? (Hint look at the overrepresented sequences)
+
+        choices:
+
+        - Yes
+        - ~CORRECT~ No
+    -
+        type: InlineMultiQuestion
+        id: option
+        cid: terminal
+        value: 5
+        prompt: |
+
+          # fastqc option
+
+          How can you use -a option with fastqc? (Hint try fastqc -h).
+
+        question: |
+
+            [[blank1]] can be supplied in a file for screening.
+
+        answers:
+
+            blank1:
+                type: ShortAnswer
+                width: 10em
+                correct_answer:
+                - <plain> Adapters
+                - <plain> adapter
+    -
+        type: Page
+        id: clipping
+        cid: terminal
+        content: |
+
+            ## Adapter Clipping
+
+            {% include "markdowns/06_adapter-clipping.md" %}
+    -
+        type: TextQuestion
+        id: trimoff
+        cid: terminal
+        value: 5
+        prompt: |
+
+          # Trim 5' end
+
+          What values would you use for `-f` if you wanted to trim off 10 bases at the 5’ end of the reads?
+
+        answers:
+
+          - <plain> 11
 
 completion_text: |
 
