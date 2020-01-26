@@ -1,3 +1,5 @@
+## Good Quality Data
+
 View the FastQC report files `fastqc_report.html` to see examples of a
 good quality data and compare the quality plot with that of the
 `bad_example_fastqc`.

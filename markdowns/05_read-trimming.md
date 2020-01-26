@@ -1,3 +1,5 @@
+## Read Trimming
+
 Read trimming can be done in a variety of different ways. Choose a
 method which best suits your data. Here we are giving examples of
 fixed-length trimming and quality-based trimming.

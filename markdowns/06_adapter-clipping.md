@@ -1,3 +1,5 @@
+## Adapter Clipping
+
 Sometimes sequence reads may end up getting the leftover of adapters and
 primers used in the sequencing process. It’s good practice to screen
 your data for these possible contamination for more sensitive alignment

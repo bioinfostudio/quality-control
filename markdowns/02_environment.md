@@ -1,3 +1,5 @@
+## Prepare the Environment
+
 To investigate sequence data quality we will demonstrate tools called
 FastQC and Skewer. FastQC will process and present the reports in a
 visual manner. Based on the results, the sequence data can be processed

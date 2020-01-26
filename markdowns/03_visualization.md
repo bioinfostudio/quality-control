@@ -1,3 +1,5 @@
+## Quality Visualisation
+
 We have a file for a good quality and bad quality statistics. FastQC
 generates results in the form of a zipped and unzipped directory for
 each input file.

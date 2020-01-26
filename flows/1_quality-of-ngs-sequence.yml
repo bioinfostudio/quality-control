@@ -35,27 +35,24 @@ groups:
         type: Page
         id: intro
         cid: terminal
+        title: Introduction
         content: |
 
-            ## Introduction
- 
             {% include "markdowns/01_introduction.md" %}
     -
         type: Page
         id: environ 
         cid: terminal
+        title: Prepare the Environment
         content: |
 
-            ## Prepare the Environment
- 
             {% include "markdowns/02_environment.md" %}
     -
         type: Page
         id: visualize
         cid: terminal
+        title: Quality Visualisation
         content: |
-
-            ## Quality Visualisation
 
             {% include "markdowns/03_visualization.md" %}
     -
@@ -63,6 +60,7 @@ groups:
         id: read
         cid: terminal
         value: 10
+        title: Read amount and length
         prompt: |
 
             # How many sequences were there in your file? What is the read length?
@@ -90,10 +88,9 @@ groups:
         id: perbase
         cid: terminal
         value: 5
+        title: Does the quality score values vary throughout the read length?
         prompt: |
 
-            # Does the quality score values vary throughout the read length?
-            
             Look at the `per base sequence quality plot`
 
         choices:
@@ -107,6 +104,7 @@ groups:
         id: range
         cid: terminal
         value: 10
+        title: Quality score range
         prompt: |
 
           # What is the quality score range you see?
@@ -133,9 +131,8 @@ groups:
         id: half
         cid: terminal
         value: 5
+        title: Which position?
         prompt: |
-
-          # Which position?
 
           At around which position do the scores start falling below Q20 for the 25% quartile range (25% of reads below Q20)?
 
@@ -148,6 +145,7 @@ groups:
         id: trim
         cid: terminal
         value: 5
+        title: How can we trim the reads to filter out the low quality data?
         prompt: |
 
           # How can we trim the reads to filter out the low quality data?
@@ -168,18 +166,16 @@ groups:
         type: Page
         id: gqd
         cid: terminal
+        title: Good Quality Data
         content: |
-
-            ## Good Quality Data
 
             {% include "markdowns/04_good-quality.md" %}
     -
         type: Page
         id: trimming
         cid: terminal
+        title: Read Trimming
         content: |
-
-            ## Read Trimming
 
             {% include "markdowns/05_read-trimming.md" %}
     -
@@ -187,9 +183,8 @@ groups:
         id: after_trim
         cid: terminal
         value: 5
+        title: Number of total reads
         prompt: |
-
-            # Number of total reads
 
             Did the number of total reads in R1 and R2 change after trimming?
 
@@ -207,9 +202,8 @@ groups:
         id: lengths
         cid: terminal
         value: 10
+        title: Range of read length
         prompt: |
-
-          # Range of read length
 
           What reads lengths were obtained after quality based trimming?
 
@@ -239,9 +233,8 @@ groups:
         id: adapter
         cid: terminal
         value: 5
+        title: Adapter
         prompt: |
-
-            # Adapter
 
             Did you observe adapter sequences in the data? (Hint look at the overrepresented sequences)
 
@@ -254,9 +247,8 @@ groups:
         id: option
         cid: terminal
         value: 5
+        title: FastQC option
         prompt: |
-
-          # fastqc option
 
           How can you use `-a` option with fastqc? (Hint try fastqc -h).
 
@@ -276,9 +268,8 @@ groups:
         type: Page
         id: clipping
         cid: terminal
+        title: Adapter Clipping
         content: |
-
-            ## Adapter Clipping
 
             {% include "markdowns/06_adapter-clipping.md" %}
     -
@@ -286,18 +277,11 @@ groups:
         id: trimoff
         cid: terminal
         value: 5
+        title: Trim 5' end
         prompt: |
-
-          # Trim 5' end
 
           What values would you use for `-f` if you wanted to trim off 10 bases at the 5’ end of the reads?
 
         answers:
 
           - <plain> 11
-
-completion_text: |
-
-    # See you !
-
-    Thanks for completing the quiz.
