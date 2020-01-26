@@ -34,7 +34,7 @@ groups:
     -
         type: Page
         id: intro
-        cid: terminal
+        cid: qc
         title: Introduction
         content: |
 
@@ -42,7 +42,7 @@ groups:
     -
         type: Page
         id: environ 
-        cid: terminal
+        cid: qc
         title: Prepare the environment
         content: |
 
@@ -50,7 +50,7 @@ groups:
     -
         type: Page
         id: visualize
-        cid: terminal
+        cid: qc
         title: Quality visualisation
         content: |
 
@@ -58,7 +58,7 @@ groups:
     -
         type: InlineMultiQuestion
         id: read
-        cid: terminal
+        cid: qc
         value: 10
         title: Read amount and length
         prompt: |
@@ -86,7 +86,7 @@ groups:
     -
         type: ChoiceQuestion
         id: perbase
-        cid: terminal
+        cid: qc
         value: 5
         title: Per base sequence quality
         prompt: |
@@ -104,7 +104,7 @@ groups:
     -
         type: InlineMultiQuestion
         id: range
-        cid: terminal
+        cid: qc
         value: 10
         title: Quality score range
         prompt: |
@@ -131,7 +131,7 @@ groups:
     -
         type: TextQuestion
         id: half
-        cid: terminal
+        cid: qc
         value: 5
         title: Quality scores across all bases
         prompt: |
@@ -145,7 +145,7 @@ groups:
     -
         type: MultipleChoiceQuestion
         id: trimchoice
-        cid: terminal
+        cid: qc
         credit_mode: exact
         value: 1
         shuffle: False
@@ -161,7 +161,7 @@ groups:
     -
         type: Page
         id: gqd
-        cid: terminal
+        cid: qc
         title: Good quality data
         content: |
 
@@ -169,7 +169,7 @@ groups:
     -
         type: Page
         id: trimming
-        cid: terminal
+        cid: qc
         title: Read trimming
         content: |
 
@@ -177,7 +177,7 @@ groups:
     -
         type: ChoiceQuestion
         id: after_trim
-        cid: terminal
+        cid: qc
         value: 5
         title: Number of total reads
         prompt: |
@@ -196,7 +196,7 @@ groups:
     -
         type: InlineMultiQuestion
         id: lengths
-        cid: terminal
+        cid: qc
         value: 10
         title: Range of read length
         prompt: |
@@ -227,7 +227,7 @@ groups:
     -
         type: ChoiceQuestion
         id: adapter
-        cid: terminal
+        cid: qc
         value: 5
         title: Adapter
         prompt: |
@@ -241,7 +241,7 @@ groups:
     -
         type: InlineMultiQuestion
         id: option
-        cid: terminal
+        cid: qc
         value: 5
         title: FastQC option
         prompt: |
@@ -265,7 +265,7 @@ groups:
     -
         type: Page
         id: clipping
-        cid: terminal
+        cid: qc
         title: Adapter clipping
         content: |
 
@@ -273,7 +273,7 @@ groups:
     -
         type: TextQuestion
         id: trimoff
-        cid: terminal
+        cid: qc
         value: 5
         title: Trim 5' end
         prompt: |
