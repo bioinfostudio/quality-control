@@ -187,7 +187,7 @@ groups:
         choices:
 
         - ~CORRECT~ Yes
-        - No
+        - <plain> No
 
         answer_explanation:
 
@@ -234,11 +234,9 @@ groups:
 
           # Did you observe adapter sequences in the data?
           
-          Look at the overrepresented sequences
-
         choices:
 
-        - Yes
+        - <plain> Yes
         - ~CORRECT~ No
     -
         type: InlineMultiQuestion
@@ -254,7 +252,8 @@ groups:
 
         question: |
 
-          [[blank1]] can be supplied in a file for screening
+            The list of [[blank1]]
+            sequences can be supplied in a file for screening
 
         answers:
 
@@ -262,7 +261,6 @@ groups:
                 type: ShortAnswer
                 width: 10em
                 correct_answer:
-                - <plain> Adapters
                 - <plain> adapter
     -
         type: Page

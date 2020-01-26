@@ -17,13 +17,13 @@ Skewer to perform the quality trimming.
 Run the following command to quality trim a set of paired end data.
 
 ```bash
-$ cd /home/trainee/qc
+$ cd /home/bioinfo/qc
 $ skewer -t 4 -l 50  -q 30 -Q 25 -m pe -o qcdemo qcdemo_R1.fastq.gz qcdemo_R2.fastq.gz
 ```
 
 > **-t:** number of threads to use  
 > **-l:** min length to keep after trimming  
-> **-q:** Quality threshold used for trimming at 3’ end  
+> **-q:** quality threshold used for trimming at 3’ end  
 > **-Q:** mean quality threshold for a read  
 > **-m:** pair-end mode  
 
@@ -44,10 +44,8 @@ $ fastqc -f fastq qcdemo-trimmed-pair2.fastq
 
 Visualise the `fastqc` results:
 
-```bash
-$ firefox qcdemo-trimmed-pair1_fastqc.html &
-$ firefox qcdemo-trimmed-pair2_fastqc.html &
-```
+- [qcdemo-trimmed-pair1_fastqc.html](repo:results/qcdemo-trimmed-pair1_fastqc.html){:target="_blank"}
+- [qcdemo-trimmed-pair2_fastqc.html](repo:results/qcdemo-trimmed-pair2_fastqc.html){:target="_blank"}
 
 Let’s look at the quality from the second reads. The output should look
 like:

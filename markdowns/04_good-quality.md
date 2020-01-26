@@ -1,12 +1,7 @@
 ## Good Quality Data
 
-View the FastQC report files `fastqc_report.html` to see examples of a
-good quality data and compare the quality plot with that of the
-`bad_example_fastqc`.
-
-```bash
-$ firefox qcdemo_R1_fastqc.html &
-```
+View the FastQC report [qcdemo_R1_fastqc.html](repo:results/qcdemo_R1_fastqc.html){:target="_blank"}
+to see examples of a good quality data and compare the quality plot with that of the bad example.
 
 Sequencing errors can complicate the downstream analysis, which normally
 requires that reads be aligned to each other (for genome assembly) or to

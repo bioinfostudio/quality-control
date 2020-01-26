@@ -11,7 +11,7 @@ $ fastqc -f fastq qcdemo_R1.fastq.gz
 $ fastqc -f fastq qcdemo_R2.fastq.gz
 ```
 
-View the FastQC report file of the bad data: [qcdemo_R2_fastqc.html](repo:results/qcdemo_R2_fastqc.html){:target="new"}
+View the FastQC report file of the bad data: [qcdemo_R2_fastqc.html](repo:results/qcdemo_R2_fastqc.html){:target="_blank"}
 
 The report file will have a Basic Statistics table and various graphs
 and tables for different quality statistics e.g.:
