@@ -43,7 +43,7 @@ groups:
         type: Page
         id: environ 
         cid: terminal
-        title: Prepare the Environment
+        title: Prepare the environment
         content: |
 
             {% include "markdowns/02_environment.md" %}
@@ -51,7 +51,7 @@ groups:
         type: Page
         id: visualize
         cid: terminal
-        title: Quality Visualisation
+        title: Quality visualisation
         content: |
 
             {% include "markdowns/03_visualization.md" %}
@@ -63,7 +63,7 @@ groups:
         title: Read amount and length
         prompt: |
 
-            # How many sequences were there in your file? What is the read length?
+            # How many sequences were there in your file(qcdemo_R2.fastq.gz)? What is the read length?
 
         question: |
 
@@ -133,7 +133,7 @@ groups:
         id: half
         cid: terminal
         value: 5
-        title: Which position?
+        title: Quality scores across all bases
         prompt: |
 
           # At around which position do the scores start falling below Q20 for the 25% quartile range (25% of reads below Q20)?
@@ -143,32 +143,26 @@ groups:
           - <plain> 30
           - <plain> thirty
     -
-        type: InlineMultiQuestion
-        id: trim
+        type: MultipleChoiceQuestion
+        id: trimchoice
         cid: terminal
-        value: 5
+        credit_mode: exact
+        value: 1
+        shuffle: False
         title: How can we trim the reads?
         prompt: |
 
-          # How can we trim the reads to filter out the low quality data?
+            # How can we trim the reads to filter out the low quality data?
 
-        question: |
+        choices:
 
-            By trimming off the bases after a fixed position of
-            the read or by trimming off bases based on the [[blank1]] score.
-
-        answers:
-
-            blank1:
-                type: ShortAnswer
-                width: 10em
-                correct_answer:
-                - <plain> quality
+          - ~CORRECT~ By trimming off the bases after a fixed position of the read
+          - ~CORRECT~ By trimming off bases based on the quality score
     -
         type: Page
         id: gqd
         cid: terminal
-        title: Good Quality Data
+        title: Good quality data
         content: |
 
             {% include "markdowns/04_good-quality.md" %}
@@ -176,7 +170,7 @@ groups:
         type: Page
         id: trimming
         cid: terminal
-        title: Read Trimming
+        title: Read trimming
         content: |
 
             {% include "markdowns/05_read-trimming.md" %}
@@ -274,7 +268,7 @@ groups:
         type: Page
         id: clipping
         cid: terminal
-        title: Adapter Clipping
+        title: Adapter clipping
         content: |
 
             {% include "markdowns/06_adapter-clipping.md" %}
