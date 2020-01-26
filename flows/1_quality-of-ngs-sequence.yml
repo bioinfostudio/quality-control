@@ -88,8 +88,10 @@ groups:
         id: perbase
         cid: terminal
         value: 5
-        title: Does the quality score values vary throughout the read length?
+        title: Per base sequence quality
         prompt: |
+
+            # Does the quality score values vary throughout the read length?
 
             Look at the `per base sequence quality plot`
 
@@ -134,7 +136,7 @@ groups:
         title: Which position?
         prompt: |
 
-          At around which position do the scores start falling below Q20 for the 25% quartile range (25% of reads below Q20)?
+          # At around which position do the scores start falling below Q20 for the 25% quartile range (25% of reads below Q20)?
 
         answers:
 
@@ -145,7 +147,7 @@ groups:
         id: trim
         cid: terminal
         value: 5
-        title: How can we trim the reads to filter out the low quality data?
+        title: How can we trim the reads?
         prompt: |
 
           # How can we trim the reads to filter out the low quality data?
@@ -186,7 +188,7 @@ groups:
         title: Number of total reads
         prompt: |
 
-            Did the number of total reads in R1 and R2 change after trimming?
+            # Did the number of total reads in R1 and R2 change after trimming?
 
         choices:
 
@@ -205,7 +207,7 @@ groups:
         title: Range of read length
         prompt: |
 
-          What reads lengths were obtained after quality based trimming?
+          # What reads lengths were obtained after quality based trimming?
 
         question: |
 
@@ -236,7 +238,9 @@ groups:
         title: Adapter
         prompt: |
 
-            Did you observe adapter sequences in the data? (Hint look at the overrepresented sequences)
+          # Did you observe adapter sequences in the data?
+          
+          Look at the overrepresented sequences
 
         choices:
 
@@ -250,11 +254,13 @@ groups:
         title: FastQC option
         prompt: |
 
-          How can you use `-a` option with fastqc? (Hint try fastqc -h).
+          # How can you use `-a` option with fastqc?
+          
+          Try fastqc -h
 
         question: |
 
-            [[blank1]] can be supplied in a file for screening
+          [[blank1]] can be supplied in a file for screening
 
         answers:
 
@@ -280,7 +286,7 @@ groups:
         title: Trim 5' end
         prompt: |
 
-          What values would you use for `-f` if you wanted to trim off 10 bases at the 5’ end of the reads?
+          # What values would you use for `-f` if you wanted to trim off 10 bases at the 5’ end of the reads?
 
         answers:
 
