@@ -32,27 +32,27 @@ groups:
     shuffle: False
     pages:
     -
-        type: Page
+        type: TerminalQuestion
         id: intro
         cid: qc
         title: Introduction
-        content: |
+        prompt: |
 
             {% include "markdowns/01_introduction.md" %}
     -
-        type: Page
+        type: TerminalQuestion
         id: environ 
         cid: qc
         title: Prepare the environment
-        content: |
+        prompt: |
 
             {% include "markdowns/02_environment.md" %}
     -
-        type: Page
+        type: TerminalQuestion
         id: visualize
         cid: qc
         title: Quality visualisation
-        content: |
+        prompt: |
 
             {% include "markdowns/03_visualization.md" %}
     -
@@ -159,19 +159,19 @@ groups:
           - ~CORRECT~ By trimming off the bases after a fixed position of the read
           - ~CORRECT~ By trimming off bases based on the quality score
     -
-        type: Page
+        type: TerminalQuestion
         id: gqd
         cid: qc
         title: Good quality data
-        content: |
+        prompt: |
 
             {% include "markdowns/04_good-quality.md" %}
     -
-        type: Page
+        type: TerminalQuestion
         id: trimming
         cid: qc
         title: Read trimming
-        content: |
+        prompt: |
 
             {% include "markdowns/05_read-trimming.md" %}
     -
@@ -263,11 +263,11 @@ groups:
                 correct_answer:
                 - <plain> adapter
     -
-        type: Page
+        type: TerminalQuestion
         id: clipping
         cid: qc
         title: Adapter clipping
-        content: |
+        prompt: |
 
             {% include "markdowns/06_adapter-clipping.md" %}
     -
