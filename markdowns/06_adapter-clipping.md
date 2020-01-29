@@ -20,17 +20,15 @@ removing adapter sequence:
 Here we are demonstrating `Skewer` to trim a given adapter sequence.
 
 ```bash
-$ cd /home/bioinfo/qc
-$ fastqc -f fastq  adaptorQC.fastq.gz
+qc$ fastqc -f fastq  adaptorQC.fastq.gz
 ```
 View [adaptorQC_fastqc.html](repo:results/adaptorQC_fastqc.html){:target="_blank"}
 
 ```bash
-$ skewer -x TGGAATTCTCGGGTGCCAAGGT -t 20 -l 10 -L 35 -q 30 adaptorQC.fastq.gz
+qc$ skewer -x TGGAATTCTCGGGTGCCAAGGT -l 10 -L 35 -q 30 adaptorQC.fastq.gz
 ```
 
 > **-x:** adaptor sequence used  
-> **-t:** number of threads to use  
 > **-l:** min length to keep after trimming  
 > **-L:** max length to keep after trimming, in this experiment we were expecting only small RNA fragments  
 > **-q:** quality threshold used for trimming at 3’ end. Use -m option to control the end you want to trim  
@@ -39,7 +37,7 @@ Run FastQC on the adapter trimmed file and visualise the quality scores.
 Fastqc now shows adaptor free results.
 
 ```bash
-$ fastqc adaptorQC.fastq-trimmed.fastq
+qc$ fastqc adaptorQC.fastq-trimmed.fastq
 ```
 
 View [adaptorQC.fastq-trimmed_fastqc.html](repo:results/adaptorQC.fastq-trimmed_fastqc.html){:target="_blank"}
@@ -60,10 +58,9 @@ using the following command. You should still be in the qc directory, if
 not cd back in.
 
 ```bash
-$ cd /home/bioinfo/qc
-$ fastqc -f fastq bad_example.fastq
-$ fastx_trimmer -h
-$ fastx_trimmer -Q 33 -f 1 -l 80 -i bad_example.fastq -o bad_example_trimmed01.fastq
+qc$ fastqc -f fastq bad_example.fastq
+qc$ fastx_trimmer -h
+qc$ fastx_trimmer -Q 33 -f 1 -l 80 -i bad_example.fastq -o bad_example_trimmed01.fastq
 ```
 
 We used the following options in the command above:
@@ -78,7 +75,7 @@ Run FastQC on the trimmed file and visualise the quality scores of the
 trimmed file.
 
 ```bash
-$ fastqc -f fastq bad_example_trimmed01.fastq
+qc$ fastqc -f fastq bad_example_trimmed01.fastq
 ```
 
 [bad_example_trimmed01_fastqc.html](repo:results/bad_example_trimmed01_fastqc.html){:target="_blank"}

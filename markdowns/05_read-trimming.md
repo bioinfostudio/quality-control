@@ -17,11 +17,9 @@ Skewer to perform the quality trimming.
 Run the following command to quality trim a set of paired end data.
 
 ```bash
-$ cd /home/bioinfo/qc
-$ skewer -t 4 -l 50  -q 30 -Q 25 -m pe -o qcdemo qcdemo_R1.fastq.gz qcdemo_R2.fastq.gz
+qc$ skewer -l 50  -q 30 -Q 25 -m pe -o qcdemo qcdemo_R1.fastq.gz qcdemo_R2.fastq.gz
 ```
 
-> **-t:** number of threads to use  
 > **-l:** min length to keep after trimming  
 > **-q:** quality threshold used for trimming at 3’ end  
 > **-Q:** mean quality threshold for a read  
@@ -32,14 +30,14 @@ Run FastQC on the quality trimmed file and visualise the quality scores.
 Look at the last files generated, are the file names same as the input ?
 
 ```bash
-$ ls -ltr
+qc$ ls -ltr
 ```
 
 Run Fastqc on the quality trimmed files:
 
 ```bash
-$ fastqc -f fastq qcdemo-trimmed-pair1.fastq
-$ fastqc -f fastq qcdemo-trimmed-pair2.fastq
+qc$ fastqc -f fastq qcdemo-trimmed-pair1.fastq
+qc$ fastqc -f fastq qcdemo-trimmed-pair2.fastq
 ```
 
 Visualise the `fastqc` results:

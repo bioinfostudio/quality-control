@@ -12,7 +12,7 @@ Open the Terminal and go to the directory where the data are stored:
 $ cd
 $ ls
 $ cd qc
-$ pwd
+qc$ pwd
 ```
 
 At any time, help can be displayed for FastQC using the following

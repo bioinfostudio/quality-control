@@ -50,7 +50,7 @@ groups:
     -
         type: TerminalQuestion
         id: visualize
-        cid: qc
+        cid: fastqc
         title: Quality visualisation
         prompt: |
 
@@ -58,12 +58,12 @@ groups:
     -
         type: InlineMultiQuestion
         id: read
-        cid: qc
+        cid: demo
         value: 10
         title: Read amount and length
         prompt: |
 
-            # How many sequences were there in your file(qcdemo_R2.fastq.gz)? What is the read length?
+            # How many sequences were there in your file? What is the read length?
 
         question: |
 
@@ -86,7 +86,7 @@ groups:
     -
         type: ChoiceQuestion
         id: perbase
-        cid: qc
+        cid: demo
         value: 5
         title: Per base sequence quality
         prompt: |
@@ -104,7 +104,7 @@ groups:
     -
         type: InlineMultiQuestion
         id: range
-        cid: qc
+        cid: demo
         value: 10
         title: Quality score range
         prompt: |
@@ -131,7 +131,7 @@ groups:
     -
         type: TextQuestion
         id: half
-        cid: qc
+        cid: demo
         value: 5
         title: Quality scores across all bases
         prompt: |
@@ -145,7 +145,7 @@ groups:
     -
         type: MultipleChoiceQuestion
         id: trimchoice
-        cid: qc
+        cid: demo
         credit_mode: exact
         value: 1
         shuffle: False
@@ -161,7 +161,7 @@ groups:
     -
         type: TerminalQuestion
         id: gqd
-        cid: qc
+        cid: demo
         title: Good quality data
         prompt: |
 
@@ -169,7 +169,7 @@ groups:
     -
         type: TerminalQuestion
         id: trimming
-        cid: qc
+        cid: demo
         title: Read trimming
         prompt: |
 
@@ -177,7 +177,7 @@ groups:
     -
         type: ChoiceQuestion
         id: after_trim
-        cid: qc
+        cid: trim
         value: 5
         title: Number of total reads
         prompt: |
@@ -196,7 +196,7 @@ groups:
     -
         type: InlineMultiQuestion
         id: lengths
-        cid: qc
+        cid: trim
         value: 10
         title: Range of read length
         prompt: |
@@ -227,7 +227,7 @@ groups:
     -
         type: ChoiceQuestion
         id: adapter
-        cid: qc
+        cid: trim
         value: 5
         title: Adapter
         prompt: |
@@ -241,7 +241,7 @@ groups:
     -
         type: InlineMultiQuestion
         id: option
-        cid: qc
+        cid: trim
         value: 5
         title: FastQC option
         prompt: |
@@ -265,7 +265,7 @@ groups:
     -
         type: TerminalQuestion
         id: clipping
-        cid: qc
+        cid: trim
         title: Adapter clipping
         prompt: |
 
@@ -273,7 +273,7 @@ groups:
     -
         type: TextQuestion
         id: trimoff
-        cid: qc
+        cid: adapter
         value: 5
         title: Trim 5' end
         prompt: |
