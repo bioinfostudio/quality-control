@@ -1,3 +1,3 @@
-FROM asia.gcr.io/psyched-spark-243208/qc
+FROM asia.gcr.io/wise-cycling-267806/qc
 
 WORKDIR /home/bioinfo/qc

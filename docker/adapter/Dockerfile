@@ -1,4 +1,4 @@
-FROM asia.gcr.io/psyched-spark-243208/qc-base
+FROM asia.gcr.io/wise-cycling-267806/qc-base
 
 ADD https://storage.cloud.google.com/bioinfostudio/qc/data/fastq/adaptorQC.fastq.gz /home/bioinfo/qc/
 ADD https://storage.cloud.google.com/bioinfostudio/qc/data/fastq/bad_example.fastq /home/bioinfo/qc
