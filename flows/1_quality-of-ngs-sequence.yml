@@ -28,7 +28,7 @@ rules:
 
 groups:
 -
-    id: qc 
+    id: qc
     shuffle: False
     pages:
     -
@@ -41,7 +41,7 @@ groups:
             {% include "markdowns/01_introduction.md" %}
     -
         type: TerminalQuestion
-        id: environ 
+        id: environ
         cid: qc
         title: Prepare the environment
         prompt: |
@@ -74,12 +74,14 @@ groups:
             blank1:
                 type: ShortAnswer
                 width: 10em
+                required: True
                 correct_answer:
                 - <plain> 1000000
- 
+
             blank2:
                 type: ShortAnswer
                 width: 10em
+                required: True
                 appended_text: "bp"
                 correct_answer:
                 - <plain> 150
@@ -98,7 +100,7 @@ groups:
         choices:
 
         - ~CORRECT~ Yes
-        - <plain> No 
+        - <plain> No
 
         answer_explanation: Quality scores are dropping towards the end of the reads.
     -
@@ -120,12 +122,14 @@ groups:
             blank1:
                 type: ShortAnswer
                 width: 10em
+                required: True
                 correct_answer:
                 - <plain> 2
- 
+
             blank2:
                 type: ShortAnswer
                 width: 10em
+                required: True
                 correct_answer:
                 - <plain> 40
     -
@@ -212,12 +216,14 @@ groups:
             blank1:
                 type: ShortAnswer
                 width: 10em
+                required: True
                 correct_answer:
                 - <plain> 50
- 
+
             blank2:
                 type: ShortAnswer
                 width: 10em
+                required: True
                 correct_answer:
                 - <plain> 150
 
@@ -233,7 +239,7 @@ groups:
         prompt: |
 
           # Did you observe adapter sequences in the data?
-          
+
         choices:
 
         - <plain> Yes
@@ -247,7 +253,7 @@ groups:
         prompt: |
 
           # How can you use `-a` option with fastqc?
-          
+
           Try fastqc -h
 
         question: |
@@ -260,6 +266,7 @@ groups:
             blank1:
                 type: ShortAnswer
                 width: 10em
+                required: True
                 correct_answer:
                 - <plain> adapter
     -
