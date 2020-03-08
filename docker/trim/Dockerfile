@@ -1,23 +1,24 @@
-FROM asia.gcr.io/wise-cycling-267806/qc-base
+FROM gcr.io/wise-cycling-267806/qc-base
 
-ADD https://storage.googleapis.com/bioinfostudio/qc/data/fastq/adaptorQC.fastq.gz /home/bioinfo/qc/
-ADD https://storage.googleapis.com/bioinfostudio/qc/data/fastq/bad_example.fastq /home/bioinfo/qc
-ADD https://storage.googleapis.com/bioinfostudio/qc/data/fastq/good_example.fastq /home/bioinfo/qc/
-ADD https://storage.googleapis.com/bioinfostudio/qc/data/fastq/qcdemo_R1.fastq.gz /home/bioinfo/qc/
-ADD https://storage.googleapis.com/bioinfostudio/qc/data/fastq/qcdemo_R2.fastq.gz /home/bioinfo/qc/
+WORKDIR /home/bioinfo/qc
+RUN curl -LO https://storage.googleapis.com/bioinfostudio/qc/data/fastq/adaptorQC.fastq.gz 
+RUN curl -LO https://storage.googleapis.com/bioinfostudio/qc/data/fastq/bad_example.fastq
+RUN curl -LO https://storage.googleapis.com/bioinfostudio/qc/data/fastq/good_example.fastq 
+RUN curl -LO https://storage.googleapis.com/bioinfostudio/qc/data/fastq/qcdemo_R1.fastq.gz 
+RUN curl -LO https://storage.googleapis.com/bioinfostudio/qc/data/fastq/qcdemo_R2.fastq.gz 
 
-ADD https://storage.googleapis.com/bioinfostudio/qc/data/demo/qcdemo_R1_fastqc.html /home/bioinfo/qc/
-ADD https://storage.googleapis.com/bioinfostudio/qc/data/demo/qcdemo_R1_fastqc.zip /home/bioinfo/qc/
-ADD https://storage.googleapis.com/bioinfostudio/qc/data/demo/qcdemo_R2_fastqc.html /home/bioinfo/qc/
-ADD https://storage.googleapis.com/bioinfostudio/qc/data/demo/qcdemo_R2_fastqc.zip /home/bioinfo/qc/
+RUN curl -LO https://storage.googleapis.com/bioinfostudio/qc/data/demo/qcdemo_R1_fastqc.html 
+RUN curl -LO https://storage.googleapis.com/bioinfostudio/qc/data/demo/qcdemo_R1_fastqc.zip 
+RUN curl -LO https://storage.googleapis.com/bioinfostudio/qc/data/demo/qcdemo_R2_fastqc.html 
+RUN curl -LO https://storage.googleapis.com/bioinfostudio/qc/data/demo/qcdemo_R2_fastqc.zip 
 
-ADD https://storage.googleapis.com/bioinfostudio/qc/data/trim/qcdemo-trimmed-pair1.fastq /home/bioinfo/qc/
-ADD https://storage.googleapis.com/bioinfostudio/qc/data/trim/qcdemo-trimmed-pair1_fastqc.html /home/bioinfo/qc/
-ADD https://storage.googleapis.com/bioinfostudio/qc/data/trim/qcdemo-trimmed-pair1_fastqc.zip /home/bioinfo/qc/
-ADD https://storage.googleapis.com/bioinfostudio/qc/data/trim/qcdemo-trimmed-pair2.fastq /home/bioinfo/qc/
-ADD https://storage.googleapis.com/bioinfostudio/qc/data/trim/qcdemo-trimmed-pair2_fastqc.html /home/bioinfo/qc/
-ADD https://storage.googleapis.com/bioinfostudio/qc/data/trim/qcdemo-trimmed-pair2_fastqc.zip /home/bioinfo/qc/
-ADD https://storage.googleapis.com/bioinfostudio/qc/data/trim/qcdemo-trimmed.log /home/bioinfo/qc
+RUN curl -LO https://storage.googleapis.com/bioinfostudio/qc/data/trim/qcdemo-trimmed-pair1.fastq 
+RUN curl -LO https://storage.googleapis.com/bioinfostudio/qc/data/trim/qcdemo-trimmed-pair1_fastqc.html 
+RUN curl -LO https://storage.googleapis.com/bioinfostudio/qc/data/trim/qcdemo-trimmed-pair1_fastqc.zip 
+RUN curl -LO https://storage.googleapis.com/bioinfostudio/qc/data/trim/qcdemo-trimmed-pair2.fastq 
+RUN curl -LO https://storage.googleapis.com/bioinfostudio/qc/data/trim/qcdemo-trimmed-pair2_fastqc.html 
+RUN curl -LO https://storage.googleapis.com/bioinfostudio/qc/data/trim/qcdemo-trimmed-pair2_fastqc.zip 
+RUN curl -LO https://storage.googleapis.com/bioinfostudio/qc/data/trim/qcdemo-trimmed.log
 
 # setup the user directory
 RUN chown -R bioinfo:bioinfo /home/bioinfo
@@ -25,4 +26,3 @@ RUN echo 'export PS1=" \W\$ "' >> /home/bioinfo/.bashrc
 # become the bioinfo
 USER bioinfo
 ENV HOME /home/bioinfo
-WORKDIR /home/bioinfo/qc
