@@ -12,10 +12,10 @@ chunks:
 
     content: |
 
-        # Quality Control 
+        # Quality Control
 
         - Assess the overall quality of NGS (FASTQ format) sequence reads
         - Visualise the quality, and other associated matrices, of reads to decide on filters and cutoffs for cleaning up data ready for downstream analysis
         - Clean up adaptors and pre-process the sequence data for further analysis
 
-        <i class="fab fa-creative-commons"></i> / by Sonika Tyagi, Nandan Deshpande
+        <i class="fab fa-creative-commons"></i> / by BPA and CSIRO
