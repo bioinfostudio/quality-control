@@ -75,15 +75,16 @@ bin mapped to a new value of 22. This can be thought of as simply replacing all 
 occurrences of scores 20, 21, 23, 24 with a new score of 22 in the output sequence.
 Illumina claims that with the new Q-scoring system the reduction in the Illumina raw sequence format (.bcl) is typically > 50% and the resulting sorted BAM  les are reduced by ~30%.
 
-Quality Score Bins | Mapped quality scores
-:----------|:-------------
-N (no call) | N (no call)
-2-9 | 6  
-10-19 | 15  
-20-24 | 22
-25-29 | 27
-30-34 | 33
-35-39 | 37
-\>=40 | 40
 
+| Quality Score Bins   |  Mapped quality scores|
+|----------|:-------------:|
+| N (no call) | N (no call) |
+| 2-9 |    6  |
+| 10-19 | 15  |
+| 20-24 | 22 |
+| 25-29 | 27 |
+| 30-34 | 33 |
+| 35-39 | 37 |
+| >=40 | 40 |
 **Table 1:** Novaseq Q-score bins mapping
+
